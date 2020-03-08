@@ -5,8 +5,8 @@
 	"main": "./src/index.js",
 	"scripts": {
 		"start": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
-		"build": "webpack --mode=production --config ./build/webpack.config.js",
-		"compile": "tsc ./src",
+		"build": "webpack --mode=development --config ./build/webpack.config.js",
+    "typecheck": "tsc",
 		"release": "standard-version",
 		"release:first": "npm run release -- --first-release"
 	},
@@ -17,6 +17,7 @@
 		"@commitlint/cli": "^8.3.5",
 		"@commitlint/config-conventional": "^8.3.4",
 		"clean-webpack-plugin": "^3.0.0",
+		"fork-ts-checker-webpack-plugin": "^4.0.5",
 		"html-webpack-plugin": "^3.2.0",
 		"husky": "^4.2.3",
 		"standard-version": "^7.1.0",
